@@ -27,7 +27,7 @@ def datToPng(datfile,pngfile):
     
     for h in range(128):
         for w in range(128):
-            color_id = nbt_file[""]["data"]["colors"][w+h*128]
+            color_id = nbt_file.get("",nbt_file)["data"]["colors"][w+h*128]
             pix[(w,h)] = getColor(color_id)
     
     im.save(pngfile,"PNG")
